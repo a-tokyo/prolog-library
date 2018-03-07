@@ -11,25 +11,24 @@ det --> [any].
 det --> [many].
 det --> [few].
 det --> [an].
-det -> [all]
-det -> [more]
-det -> [less]
+det --> [all].
+det --> [more].
+det --> [less].
 
 
 % PREPOSITIONS
-prep --> [in]
-prep --> [after]
-prep --> [behind]
+prep --> [in].
+prep --> [after].
+prep --> [behind].
 
-prep --> [on]
-prep --> [before]
-prep --> [infront of]
-prep --> [beside]
-prep --> [by]
-prep --> [at]
-prep --> [under]
-prep --> [below]
-prep --> [towards]
+prep --> [on].
+prep --> [before].
+prep --> [beside].
+prep --> [by].
+prep --> [at].
+prep --> [under].
+prep --> [below].
+prep --> [towards].
 
 
 % NOUNS
@@ -75,35 +74,35 @@ adj --> [brilliant].
 adj --> [talented].
 adj --> [bright].
 
-% adj --> [small].
-% adj --> [big].
-% adj --> [fat].
-% adj --> [smart].
-% adj --> [intelligent].
-% adj --> [sophisticated].
-% adj --> [amazing].
-% adj --> [tall].
-% adj --> [short].
-% adj --> [huge].
-% adj --> [tiny].
-% adj --> [long].
+adj --> [small].
+adj --> [big].
+adj --> [fat].
+adj --> [smart].
+adj --> [intelligent].
+adj --> [sophisticated].
+adj --> [amazing].
+adj --> [tall].
+adj --> [short].
+adj --> [huge].
+adj --> [tiny].
+adj --> [long].
 
 
 % ADVERBS
 adv --> [quickly].
 
-adv -> [slowly].
-adv -> [abruptly].
-adv -> [firmly].
-adv -> [delightfully].
-adv -> [lightfully].
-adv -> [delicately].
-adv -> [wearily].
-adv -> [beautifully].
-adv -> [randomly].
-adv -> [willingly].
-adv -> [wickedly].
-adv -> [sloppily].
+adv --> [slowly].
+adv --> [abruptly].
+adv --> [firmly].
+adv --> [delightfully].
+adv --> [lightfully].
+adv --> [delicately].
+adv --> [wearily].
+adv --> [beautifully].
+adv --> [randomly].
+adv --> [willingly].
+adv --> [wickedly].
+adv --> [sloppily].
 
 % VERBS
 verb --> [pushed].
