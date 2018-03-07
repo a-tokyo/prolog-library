@@ -1,6 +1,9 @@
 % ########################
-%  DEFS
+%  DEFS LANG
 % ########################
+
+% CONJUNCTIVES
+cnj --> [and].
 
 % DETERMINANTS
 det --> [the].
