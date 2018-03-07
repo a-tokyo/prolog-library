@@ -7,13 +7,14 @@ det --> [the].
 det --> [a].
 det --> [every].
 det --> [some].
-det --> [any].
-det --> [many].
-det --> [few].
-det --> [an].
-det --> [all].
-det --> [more].
-det --> [less].
+
+% det --> [any].
+% det --> [many].
+% det --> [few].
+% det --> [an].
+% det --> [all].
+% det --> [more].
+% det --> [less].
 
 
 % PREPOSITIONS
@@ -21,14 +22,14 @@ prep --> [in].
 prep --> [after].
 prep --> [behind].
 
-prep --> [on].
-prep --> [before].
-prep --> [beside].
-prep --> [by].
-prep --> [at].
-prep --> [under].
-prep --> [below].
-prep --> [towards].
+% prep --> [on].
+% prep --> [before].
+% prep --> [beside].
+% prep --> [by].
+% prep --> [at].
+% prep --> [under].
+% prep --> [below].
+% prep --> [towards].
 
 
 % NOUNS
@@ -52,13 +53,13 @@ noun --> [lecturers].
 noun --> [scientists].
 noun --> [researchers].
 
-noun --> [worker].
-noun --> [workers].
-noun --> [guy].
-noun --> [human].
-noun --> [person].
-noun --> [university].
-noun --> [ministry].
+% noun --> [worker].
+% noun --> [workers].
+% noun --> [guy].
+% noun --> [human].
+% noun --> [person].
+% noun --> [university].
+% noun --> [ministry].
 
 % ADJECTIVES
 adj --> [young].
@@ -74,35 +75,35 @@ adj --> [brilliant].
 adj --> [talented].
 adj --> [bright].
 
-adj --> [small].
-adj --> [big].
-adj --> [fat].
-adj --> [smart].
-adj --> [intelligent].
-adj --> [sophisticated].
-adj --> [amazing].
-adj --> [tall].
-adj --> [short].
-adj --> [huge].
-adj --> [tiny].
-adj --> [long].
+% adj --> [small].
+% adj --> [big].
+% adj --> [fat].
+% adj --> [smart].
+% adj --> [intelligent].
+% adj --> [sophisticated].
+% adj --> [amazing].
+% adj --> [tall].
+% adj --> [short].
+% adj --> [huge].
+% adj --> [tiny].
+% adj --> [long].
 
 
 % ADVERBS
 adv --> [quickly].
 
-adv --> [slowly].
-adv --> [abruptly].
-adv --> [firmly].
-adv --> [delightfully].
-adv --> [lightfully].
-adv --> [delicately].
-adv --> [wearily].
-adv --> [beautifully].
-adv --> [randomly].
-adv --> [willingly].
-adv --> [wickedly].
-adv --> [sloppily].
+% adv --> [slowly].
+% adv --> [abruptly].
+% adv --> [firmly].
+% adv --> [delightfully].
+% adv --> [lightfully].
+% adv --> [delicately].
+% adv --> [wearily].
+% adv --> [beautifully].
+% adv --> [randomly].
+% adv --> [willingly].
+% adv --> [wickedly].
+% adv --> [sloppily].
 
 % VERBS
 verb --> [pushed].
@@ -113,21 +114,21 @@ verb --> [watched].
 verb --> [admired].
 verb --> [appreciated].
 
-verb --> [ate].
-verb --> [saw].
-verb --> [gifted].
-verb --> [drank].
-verb --> [ascended].
-verb --> [made].
-verb --> [played].
-verb --> [moved].
-verb --> [pulled].
-verb --> [worked].
-verb --> [did].
-verb --> [became].
-verb --> [asked].
-verb --> [felt].
-verb --> [became].
+% verb --> [ate].
+% verb --> [saw].
+% verb --> [gifted].
+% verb --> [drank].
+% verb --> [ascended].
+% verb --> [made].
+% verb --> [played].
+% verb --> [moved].
+% verb --> [pulled].
+% verb --> [worked].
+% verb --> [did].
+% verb --> [became].
+% verb --> [asked].
+% verb --> [felt].
+% verb --> [became].
 
 
 % ########################
