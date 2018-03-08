@@ -134,6 +134,9 @@ verb(verb(accomplish)) --> [accomplish].
 % %  LOGIC
 % % ########################
 
+
+%% Permutation generation, bulding block
+
 % % Sentence
 % sentence --> noun_phrase, adv_phrase.
 % sentence --> noun_phrase, verb_phrase.
@@ -143,7 +146,6 @@ verb(verb(accomplish)) --> [accomplish].
 % noun_phrase --> det, noun.
 % noun_phrase --> det, adj_phrase.
 % % noun_phrase --> noun_phrase, cnj, noun_phrase.
-
 
 
 % % Adjective Phrase
@@ -159,20 +161,25 @@ verb(verb(accomplish)) --> [accomplish].
 % % Preposition Phrase
 % prep_phrase --> prep, noun_phrase.
 
-s(s(X)) --> s1(X).
+s(s(X)) --> sentence(X).
 
-s1(s1(X,Y)) --> np(X), vp(Y).
+sentence(sentence(X,Y)) --> noun_phrase(X), verb_phrase(Y).
 
-np(np(X,Y)) -->
+noun_phrase(noun_phrase(X,Y)) -->
   determiner(X), noun(Y).
 
-vp(vp(X,Y)) -->
-  verb(X),np(Y).
+verb_phrase(verb_phrase(X,Y)) -->
+  verb_phrase1(X),noun_phrase(Y).
+verb_phrase1(verb_phrase1(X)) -->
+  verb(X).
+verb_phrase1(verb_phrase1(X,Y)) -->
+  adverb_phrase(X), verb_phrase1(Y).
 
-% ssubject --> noun_phrase.
-% sverb --> verb_phrase.
-% sobject --> noun_phrase, prep_phrase.
-% sobject --> noun_phrase.
+adverb_phrase(adverb_phrase(X)) -->
+  adverb(X).
+adverb_phrase(adverb_phrase(X)) -->
+  adverb(X), adverb_phrase(X).
+  
 
 % ########################
 %  END OF FILE
