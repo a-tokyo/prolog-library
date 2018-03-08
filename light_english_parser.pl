@@ -30,6 +30,11 @@ adjective(adjective(long)) --> [long].
 adjective(adjective(beautiful)) --> [beautiful].
 % CONJUNCTIVES
 conjunctive(conjunctive(and)) --> [and].
+conjunctive(conjunctive(also)) --> [also].
+conjunctive(conjunctive(however)) --> [however].
+conjunctive(conjunctive(nevertheless)) --> [nevertheless].
+conjunctive(conjunctive(although)) --> [although].
+conjunctive(conjunctive(regardless)) --> [regardless].
 % % ADVERBS
 adverb(adverb(quickly)) --> [quickly].
 adverb(adverb(slowly)) --> [slowly].
@@ -167,7 +172,7 @@ s(s(X)) --> sentence(X).
 % Sentence
 sentence(sentence(X)) --> regular_sentence(X) | conjuctive_sentence(X).
 regular_sentence(regular_sentence(X,Y)) --> noun_phrase(X), verb_phrase(Y).
-conjuctive_sentence(conjuctive_sentence(X,Y,Z)) --> regular_sentence(X), preposition(Y), regular_sentence(Z).
+conjuctive_sentence(conjuctive_sentence(X,Y,Z)) --> regular_sentence(X), conjunctive(Y), sentence(Z).
 
 % Noun
 noun_phrase(noun_phrase(X,Y)) --> determiner(X), noun(Y).
