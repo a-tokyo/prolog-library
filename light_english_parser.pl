@@ -184,7 +184,7 @@ noun_phrase(noun_phrase(X)) -->
 noun_phrase(noun_phrase(X,Y)) -->
   (noun_phrase1(X),noun_phrase(Y)) | (noun_phrase2(X),noun_phrase(Y)).
 noun_phrase(noun_phrase(X,Y,Z)) -->
-  (noun_phrase1(X), preposition(Y), noun_phrase2(Z)) | (noun_phrase1(X), preposition(Y), noun_phrase(Z)).
+  (noun_phrase1(X), preposition(Y), noun_phrase(Z)) | (noun_phrase2(X), preposition(Y), noun_phrase(Z)).
  
 noun_phrase1(noun_phrase1(X,Y)) -->
   determiner(X), noun(Y).
