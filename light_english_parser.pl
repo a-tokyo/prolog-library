@@ -1,162 +1,173 @@
-% ########################
-%  DEFS LANG
-% ########################
+% % ########################
+% %  DEFS LANG
+% % ########################
 
+% % ADJECTIVES
+adjective(adjective(young)) --> [young].
+adjective(adjective(big)) --> [big].
+adjective(adjective(large)) --> [large].
+adjective(adjective(empty)) --> [empty].
+adjective(adjective(old)) --> [old].
+adjective(adjective(poor)) --> [poor].
+adjective(adjective(white)) --> [white].
+adjective(adjective(brilliant)) --> [brilliant].
+adjective(adjective(talented)) --> [talented].
+adjective(adjective(bright)) --> [bright].
+adjective(adjective(pretty)) --> [pretty].
+adjective(adjective(small)) --> [small].
+adjective(adjective(big)) --> [big].
+adjective(adjective(fat)) --> [fat].
+adjective(adjective(smart)) --> [smart].
+adjective(adjective(intelligent)) --> [intelligent].
+adjective(adjective(sophisticated)) --> [sophisticated].
+adjective(adjective(amazing)) --> [amazing].
+adjective(adjective(tall)) --> [tall].
+adjective(adjective(short)) --> [short].
+adjective(adjective(huge)) --> [huge].
+adjective(adjective(amazing)) --> [amazing].
+adjective(adjective(tiny)) --> [tiny].
+adjective(adjective(long)) --> [long].
+adjective(adjective(beautiful)) --> [beautiful].
 % CONJUNCTIVES
-cnj --> [and].
+conjunctive(conjunctive(and)) --> [and].
+% % ADVERBS
+adverb(adverb(quickly)) --> [quickly].
+adverb(adverb(slowly)) --> [slowly].
+adverb(adverb(abruptly)) --> [abruptly].
+adverb(adverb(firmly)) --> [firmly].
+adverb(adverb(delightfully)) --> [delightfully].
+adverb(adverb(lightfully)) --> [lightfully].
+adverb(adverb(delicately)) --> [delicately].
+adverb(adverb(wearily)) --> [wearily].
+adverb(adverb(beautifully)) --> [beautifully].
+adverb(adverb(randomly)) --> [randomly].
+adverb(adverb(willingly)) --> [willingly].
+adverb(adverb(wickedly)) --> [wickedly].
+adverb(adverb(sloppily)) --> [sloppily].
+% % DETERMINANTS
+determiner(determiner(the)) --> [the].
+determiner(determiner(a)) --> [a].
+determiner(determiner(every)) --> [every].
+determiner(determiner(some)) --> [some].
+determiner(determiner(any)) --> [any].
+determiner(determiner(many)) --> [many].
+determiner(determiner(an)) --> [an].
+determiner(determiner(all)) --> [all].
+determiner(determiner(more)) --> [more].
+determiner(determiner(less)) --> [less].
+% % NOUNS
+noun(noun(boy)) --> [boy].
+noun(noun(box)) --> [box].
+noun(noun(room)) --> [room].
+noun(noun(school)) --> [school].
+noun(noun(woman)) --> [woman].
+noun(noun(man)) --> [man].
+noun(noun(envelope)) --> [envelope].
+noun(noun(shed)) --> [shed].
+noun(noun(building)) --> [building].
+noun(noun(tree)) --> [tree].
+noun(noun(girl)) --> [girl].
+noun(noun(students)) --> [students].
+noun(noun(professors)) --> [professors].
+noun(noun(lecturers)) --> [lecturers].
+noun(noun(scientists)) --> [scientists].
+noun(noun(researchers)) --> [researchers].
+noun(noun(worker)) --> [worker].
+noun(noun(workers)) --> [workers].
+noun(noun(guy)) --> [guy].
+noun(noun(human)) --> [human].
+noun(noun(person)) --> [person].
+noun(noun(university)) --> [university].
+noun(noun(ministry)) --> [ministry].
+noun(noun(r2d2)) --> [r2d2].
+noun(noun(empire)) --> [empire].
+noun(noun(luke)) --> [luke].
+noun(noun(vader)) --> [vader].
+noun(noun(star)) --> [star].
+noun(noun(task)) --> [task].
+% % PREPOSITIONS
+preposition(preposition(and)) --> [and].
+preposition(preposition(in)) --> [in].
+preposition(preposition(after)) --> [after].
+preposition(preposition(behind)) --> [behind].
+preposition(preposition(on)) --> [on].
+preposition(preposition(before)) --> [before].
+preposition(preposition(beside)) --> [beside].
+preposition(preposition(by)) --> [by].
+preposition(preposition(at)) --> [at].
+preposition(preposition(under)) --> [under].
+preposition(preposition(below)) --> [below].
+preposition(preposition(towards)) --> [towards].
+% % VERBS
+verb(verb(push)) --> [pushed].
+verb(verb(store)) --> [stored].
+verb(verb(give)) --> [gave].
+verb(verb(climb)) --> [climbed].
+verb(verb(watch)) --> [watched].
+verb(verb(admire)) --> [admired].
+verb(verb(appreciate)) --> [appreciated].
+verb(verb(eat)) --> [ate].
+verb(verb(see)) --> [saw].
+verb(verb(gift)) --> [gifted].
+verb(verb(drink)) --> [drank].
+verb(verb(ascend)) --> [ascended].
+verb(verb(make)) --> [made].
+verb(verb(play)) --> [played].
+verb(verb(walk)) --> [walked].
+verb(verb(move)) --> [moved].
+verb(verb(pull)) --> [pulled].
+verb(verb(work)) --> [worked].
+verb(verb(do)) --> [did].
+verb(verb(become)) --> [became].
+verb(verb(ask)) --> [asked].
+verb(verb(feel)) --> [felt].
+verb(verb(put)) --> [put].
+verb(verb(love)) --> [loved].
+verb(verb(build)) --> [built].
+verb(verb(destroy)) --> [destroyed].
+verb(verb(be)) --> [was].
+verb(verb(have)) --> [had].
+verb(verb(try)) --> [tried].
+verb(verb(accomplish)) --> [accomplish].
 
-% DETERMINANTS
-det --> [the].
-% det --> [a].
-% det --> [every].
-% det --> [some].
+% % ########################
+% %  LOGIC
+% % ########################
 
-% det --> [any].
-% det --> [many].
-% det --> [few].
-% det --> [an].
-% det --> [all].
-% det --> [more].
-% det --> [less].
-
-
-% PREPOSITIONS
-prep --> [in].
-% prep --> [after].
-% prep --> [behind].
-
-% prep --> [on].
-% prep --> [before].
-% prep --> [beside].
-% prep --> [by].
-% prep --> [at].
-% prep --> [under].
-% prep --> [below].
-% prep --> [towards].
-
-
-% NOUNS
-noun --> [boy].
-% noun --> [box].
-% noun --> [room].
-% noun --> [school].
-
-% noun --> [woman].
-% noun --> [man].
-% noun --> [envelope].
-% noun --> [shed].
-% noun --> [building].
-
-% noun --> [tree].
-% noun --> [girl].
-
-% noun --> [students].
-% noun --> [professors].
-% noun --> [lecturers].
-% noun --> [scientists].
-% noun --> [researchers].
-
-% noun --> [worker].
-% noun --> [workers].
-% noun --> [guy].
-% noun --> [human].
-% noun --> [person].
-% noun --> [university].
-% noun --> [ministry].
-
-% ADJECTIVES
-adj --> [young].
-% adj --> [big].
-% adj --> [large].
-% adj --> [empty].
-
-% adj --> [old].
-% adj --> [poor].
-% adj --> [white].
-
-% adj --> [brilliant].
-% adj --> [talented].
-% adj --> [bright].
-
-% adj --> [small].
-% adj --> [big].
-% adj --> [fat].
-% adj --> [smart].
-% adj --> [intelligent].
-% adj --> [sophisticated].
-% adj --> [amazing].
-% adj --> [tall].
-% adj --> [short].
-% adj --> [huge].
-% adj --> [tiny].
-% adj --> [long].
-
-
-% ADVERBS
-adv --> [quickly].
-
-% adv --> [slowly].
-% adv --> [abruptly].
-% adv --> [firmly].
-% adv --> [delightfully].
-% adv --> [lightfully].
-% adv --> [delicately].
-% adv --> [wearily].
-% adv --> [beautifully].
-% adv --> [randomly].
-% adv --> [willingly].
-% adv --> [wickedly].
-% adv --> [sloppily].
-
-% VERBS
-verb --> [pushed].
-% verb --> [stored].
-% verb --> [gave].
-% verb --> [climbed].
-% verb --> [watched].
-% verb --> [admired].
-% verb --> [appreciated].
-
-% verb --> [ate].
-% verb --> [saw].
-% verb --> [gifted].
-% verb --> [drank].
-% verb --> [ascended].
-% verb --> [made].
-% verb --> [played].
-% verb --> [moved].
-% verb --> [pulled].
-% verb --> [worked].
-% verb --> [did].
-% verb --> [became].
-% verb --> [asked].
-% verb --> [felt].
-% verb --> [became].
+% % Sentence
+% sentence --> noun_phrase, adv_phrase.
+% sentence --> noun_phrase, verb_phrase.
 
 
-% ########################
-%  LOGIC
-% ########################
-
-% Sentence
-sentence --> noun_phrase, adv_phrase.
-sentence --> noun_phrase, verb_phrase.
+% % Noun Phrase
+% noun_phrase --> det, noun.
+% noun_phrase --> det, adj_phrase.
+% % noun_phrase --> noun_phrase, cnj, noun_phrase.
 
 
-% Noun Phrase
-noun_phrase --> det, noun.
-noun_phrase --> det, adj_phrase.
-% Adjective Phrase
-adj_phrase --> adj, noun.
 
-% Verb Phrase
-verb_phrase --> verb, noun_phrase.
-% Adverb Phrase
-adv_phrase --> adv, verb_phrase.
+% % Adjective Phrase
+% adj_phrase --> adj, noun.
+
+% % Verb Phrase
+% verb_phrase --> verb, noun_phrase.
+% % verb_phrase --> adv, noun_phrase.
+% % Adverb Phrase
+% adv_phrase --> adv, verb_phrase.
 
 
-% Preposition Phrase
-prep_phrase --> prep, noun_phrase.
+% % Preposition Phrase
+% prep_phrase --> prep, noun_phrase.
+
+s(s(X)) --> s1(X).
+
+s1(s1(X,Y)) --> np(X), vp(Y).
+
+np(np(X,Y)) -->
+  determiner(X), noun(Y).
+
+vp(vp(X,Y)) -->
+  verb(X),np(Y).
 
 % ssubject --> noun_phrase.
 % sverb --> verb_phrase.
