@@ -91,7 +91,6 @@ noun(noun(vader)) --> [vader].
 noun(noun(star)) --> [star].
 noun(noun(task)) --> [task].
 % % PREPOSITIONS
-preposition(preposition(and)) --> [and].
 preposition(preposition(in)) --> [in].
 preposition(preposition(after)) --> [after].
 preposition(preposition(behind)) --> [behind].
@@ -103,6 +102,7 @@ preposition(preposition(at)) --> [at].
 preposition(preposition(under)) --> [under].
 preposition(preposition(below)) --> [below].
 preposition(preposition(towards)) --> [towards].
+preposition(preposition(and)) --> [and].
 % % VERBS
 verb(verb(push)) --> [pushed].
 verb(verb(store)) --> [stored].
@@ -175,17 +175,30 @@ regular_sentence(regular_sentence(X,Y)) --> noun_phrase(X), verb_phrase(Y).
 conjuctive_sentence(conjuctive_sentence(X,Y,Z)) --> regular_sentence(X), conjunctive(Y), sentence(Z).
 
 % Noun
-noun_phrase(noun_phrase(X,Y)) --> determiner(X), noun(Y).
-noun_phrase(noun_phrase(X,Y,Z)) --> determiner(X), adjective_phrase(Y), noun(Z).
+% noun_phrase(noun_phrase(X,Y)) --> determiner(X), noun(Y).
+% noun_phrase(noun_phrase(X,Y,Z)) --> noun_phrase1(X,Y,Z).
+% noun_phrase(noun_phrase(X,Y,Z)) --> noun_phrase(X), conjunctive(Y), noun_phrase(Z).
 
+noun_phrase(noun_phrase(X)) -->
+  (noun_phrase1(X)) | (noun_phrase2(X)).
+noun_phrase(noun_phrase(X,Y)) -->
+  (noun_phrase1(X),noun_phrase(Y)) | (noun_phrase2(X),noun_phrase(Y)).
+noun_phrase(noun_phrase(X,Y,Z)) -->
+  (noun_phrase1(X), preposition(Y), noun_phrase(Z)) | (noun_phrase2(X), preposition(Y), noun_phrase(Z)).
+ 
+noun_phrase1(noun_phrase1(X,Y,Z)) -->
+  determiner(X), adjective_phrase(Y), noun(Z).
+
+noun_phrase2(noun_phrase2(X)) -->
+  noun(X).
+noun_phrase2(noun_phrase2(X,Y)) -->
+  determiner(X), noun(Y) | adjective_phrase(X), noun(Y).
 
 % Verb
 verb_phrase(verb_phrase(X,Y)) -->
   verb_phrase1(X),noun_phrase(Y).
 verb_phrase(verb_phrase(W,X,Y,Z)) -->
-  verb_phrase1(W), noun_phrase(X), conjunctive(Y), verb_phrase(Z).
-verb_phrase(verb_phrase(W,X,Y,Z)) -->
-  verb_phrase1(W), noun_phrase(X), preposition(Y), noun_phrase(Z).
+  verb_phrase1(W), noun_phrase(X), conjunctive(Y), verb_phrase(Z) | verb_phrase1(W), noun_phrase(X), preposition(Y), noun_phrase(Z).
 verb_phrase1(verb_phrase1(X)) -->
   verb(X).
 verb_phrase1(verb_phrase1(X,Y)) -->
