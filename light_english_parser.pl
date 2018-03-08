@@ -176,14 +176,28 @@ conjuctive_sentence(conjuctive_sentence(X,Y,Z)) --> regular_sentence(X), conjunc
 
 % Noun
 noun_phrase(noun_phrase(X,Y)) --> determiner(X), noun(Y).
+noun_phrase(noun_phrase(X,Y,Z)) --> determiner(X), adjective_phrase(Y), noun(Z).
+
 
 % Verb
 verb_phrase(verb_phrase(X,Y)) -->
   verb_phrase1(X),noun_phrase(Y).
+verb_phrase(verb_phrase(W,X,Y,Z)) -->
+  verb_phrase1(W), noun_phrase(X), conjunctive(Y), verb_phrase(Z).
+verb_phrase(verb_phrase(W,X,Y,Z)) -->
+  verb_phrase1(W), noun_phrase(X), preposition(Y), noun_phrase(Z).
 verb_phrase1(verb_phrase1(X)) -->
   verb(X).
 verb_phrase1(verb_phrase1(X,Y)) -->
   adverb_phrase(X), verb_phrase1(Y).
+verb_phrase1(verb_phrase1(X,Y,Z)) -->
+    verb(X),conjunctive(Y),verb_phrase1(Z).
+
+% Adjective
+adjective_phrase(adjective_phrase(X)) -->
+  adjective(X).
+adjective_phrase(adjective_phrase(X,Y)) -->
+  adjective(X), adjective_phrase(Y).
 
 % Adverb
 adverb_phrase(adverb_phrase(X)) -->
