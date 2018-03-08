@@ -161,13 +161,18 @@ verb(verb(accomplish)) --> [accomplish].
 % % Preposition Phrase
 % prep_phrase --> prep, noun_phrase.
 
+% Appending s start variable for submission purposes
 s(s(X)) --> sentence(X).
 
-sentence(sentence(X,Y)) --> noun_phrase(X), verb_phrase(Y).
+% Sentence
+sentence(sentence(X)) --> regular_sentence(X) | conjuctive_sentence(X).
+regular_sentence(regular_sentence(X,Y)) --> noun_phrase(X), verb_phrase(Y).
+conjuctive_sentence(conjuctive_sentence(X,Y,Z)) --> regular_sentence(X), preposition(Y), regular_sentence(Z).
 
-noun_phrase(noun_phrase(X,Y)) -->
-  determiner(X), noun(Y).
+% Noun
+noun_phrase(noun_phrase(X,Y)) --> determiner(X), noun(Y).
 
+% Verb
 verb_phrase(verb_phrase(X,Y)) -->
   verb_phrase1(X),noun_phrase(Y).
 verb_phrase1(verb_phrase1(X)) -->
@@ -175,11 +180,11 @@ verb_phrase1(verb_phrase1(X)) -->
 verb_phrase1(verb_phrase1(X,Y)) -->
   adverb_phrase(X), verb_phrase1(Y).
 
+% Adverb
 adverb_phrase(adverb_phrase(X)) -->
   adverb(X).
 adverb_phrase(adverb_phrase(X)) -->
   adverb(X), adverb_phrase(X).
-  
 
 % ########################
 %  END OF FILE
